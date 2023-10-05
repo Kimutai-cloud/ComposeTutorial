@@ -53,6 +53,7 @@ fun Conversation(messages: List<Message>) {
         }
     }
 }
+@Composable
 fun MessageCard(msg: Message) {
     Row(modifier = Modifier.padding(all = 8.dp)) {
         Image(
@@ -104,4 +105,10 @@ fun PreviewMessageCard() {
         }
     }
 }
-
+@Preview
+@Composable
+fun PreviewConversation() {
+    ComposeTutorialTheme {
+        Conversation(SampleData.conversationSample)
+    }
+}
